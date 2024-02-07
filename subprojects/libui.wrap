@@ -1,0 +1,8 @@
+[wrap-git]
+url = https://github.com/libui-ng/libui-ng
+revision = 4d46de31eafad84c88b939356bcd64e6c5ee3821
+diff_files = libui.diff
+depth = 1
+
+[provide]
+libui = libui_dep

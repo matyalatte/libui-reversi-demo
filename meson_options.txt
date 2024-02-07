@@ -1,0 +1,1 @@
+option('osx_build_universal', type : 'boolean', value : true, description : 'Build universal binaries on OSX')

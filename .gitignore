@@ -1,0 +1,42 @@
+# general
+*.txt
+!meson_options.txt
+*.bat
+*.sh
+
+# subprojects
+subprojects/libui
+subprojects/reversi
+
+# built files
+libui_rubiks_demo
+*.exe
+*.zip
+*.tar.*
+
+# intermediate files
+build
+*.log
+*.cmake
+
+.vs*
+out
+*.ilk
+*.pdb
+*.obj
+*.lib
+*.bin
+*.ninja
+*.manifest
+!src/*.manifest
+*.rc
+!src/*.rc
+*.res
+*.ninja
+
+*.a
+*.o
+*.o.d
+*.internal
+*.test
+*.make

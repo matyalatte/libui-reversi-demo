@@ -1,0 +1,13 @@
+diff --git a/meson.build b/meson.build
+index 6851b1f7..b9a3ef5f 100644
+--- a/meson.build
++++ b/meson.build
+@@ -66,7 +66,7 @@ libui_is_debug = get_option('buildtype').startswith('debug')
+ libui_project_compile_args = []
+ libui_project_link_args = []
+ 
+-if libui_OS == 'darwin'
++if libui_OS == 'darwin' and not meson.is_subproject()
+ 	libui_darwin_langs = ['c', 'objc']
+ 
+ 	libui_macosx_version_min = '-mmacosx-version-min=10.8'
