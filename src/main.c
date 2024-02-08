@@ -110,7 +110,7 @@ static int onMainLoop(void *data)
 
     if (g_game_state == GAME_FLIP) {
         if (isFinished(&g_flip_animator)) {
-            // End the flip animation
+            // End of the flip animation
             g_game_state = GAME_MOVE;
             initFlipAnimator(&g_flip_animator);
             if (!revHasLegalMoves(g_board)) {
@@ -146,9 +146,14 @@ static int onMainLoop(void *data)
 
 static void onInit(uiButton *b, void *data)
 {
+    // Get players from the combo boxes.
     g_player[DISK_BLACK] = uiComboboxSelected(g_combo_boxes[DISK_BLACK]);
     g_player[DISK_WHITE] = uiComboboxSelected(g_combo_boxes[DISK_WHITE]);
+
+    // Initialize the animator
     initFlipAnimator(&g_flip_animator);
+
+    // Initialize the board with the four disks.
     revInitBoard(g_board);
     g_game_state = GAME_INIT;
 }
@@ -175,6 +180,8 @@ void createWindow()
 
     uiArea* area = uiNewArea(&g_handler);
     uiBoxAppend(vbox, uiControl(area), 1);
+
+    // Call onMainLoop every 10ms
     uiTimer(10, onMainLoop, area);
 
     // Combo boxes and Buttons
