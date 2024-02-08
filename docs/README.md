@@ -2,10 +2,12 @@
 
 Demo app to play reversi using [libui-ng](https://github.com/libui-ng/libui-ng) and [reversi-core](https://github.com/matyalatte/reversi-core).  
 
+https://github.com/matyalatte/libui-reversi-demo/assets/69258547/4c6c5f81-d9f1-45c9-bd6b-75da017971a5
+
 ## Supported Platforms
 
 -   Windows 7 or later  
--   macOS 10.9 or later  
+-   macOS 10.8 or later  
 -   Linux with GTK+ 3.10 or later  
 
 ## Building

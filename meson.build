@@ -44,7 +44,7 @@ if proj_OS == 'windows'
 elif proj_OS == 'darwin'
     add_languages('objc', required: true)
     languages = ['c', 'cpp', 'objc']
-    macosx_version_min = '-mmacosx-version-min=10.9'
+    macosx_version_min = '-mmacosx-version-min=10.8'
     add_global_arguments(macosx_version_min, language: languages)
     add_global_link_arguments(macosx_version_min, language: languages)
 
