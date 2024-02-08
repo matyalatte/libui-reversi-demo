@@ -20,7 +20,6 @@ proj_is_release = get_option('buildtype').startswith('release')
 proj_sources = ['src/main.c']
 proj_manifest = []
 proj_link_args = []
-proj_cpp_args = []
 
 if proj_OS == 'windows'
     windows = import('windows')
